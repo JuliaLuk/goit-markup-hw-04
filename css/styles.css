@@ -1,12 +1,13 @@
 :root {
-  /* primary */
   --primary-black-cl: #434455;
   --primary-black-bg: #434455;
   --primary-white-cl: #ffffff;
   --primary-white-bg: #ffffff;
   --primary-accent-cl: #4d5ae5;
   --primary-accent-bg: #4d5ae5;
-  /* secondary */
+  --primary-gray-bg: #8e8f99;
+  --primary-gray-cl: #8e8f99;
+
   --secondary-black-cl: #2e2f42;
   --secondary-black-bg: #2e2f42;
   --secondary-white-cl: #f4f4fd;
@@ -263,6 +264,7 @@ button {
 .li-text {
   line-height: 1.5;
   color: var(--primary-black-cl);
+  margin-bottom: 8px;
 }
 
 /* our activity */
@@ -309,10 +311,63 @@ button {
 }
 
 .team-name {
+  width: 232px;
   padding: 32px 16px;
+  gap: 8px;
+  margin: 0;
 }
 
+.team-icon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+/* customers */
+
+.customers {
+}
+.customers-container {
+  padding: 120px 0;
+}
+.customers-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.customers-item {
+}
+.customers-link {
+  width: 168px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--primary-gray-cl);
+  padding: 16px 32px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: orange;
+}
+
+.customers-link:hover,
+.customers-link:focus .customers-icon {
+  fill: orange;
+}
 /* footer */
+
 .footer {
   background-color: var(--secondary-black-bg);
   padding-top: 100px;
