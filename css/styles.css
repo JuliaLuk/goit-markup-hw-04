@@ -335,7 +335,11 @@ button {
   width: 232px;
   padding: 32px 0;
   gap: 8px;
-  margin: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-icon-list {
@@ -447,12 +451,16 @@ button {
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.02em;
-  line-height: inherit;
+  line-height: 1.5;
   color: var(--primary-white-cl);
   margin-bottom: 16px;
 }
+
+.footer-icon-list {
+  gap: 16px;
+}
 .footer-icon-link:hover,
-footer-icon-link:focus {
+.footer-icon-link:focus {
   background-color: var(--secondary-active-bg);
 }
 
