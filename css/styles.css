@@ -7,6 +7,8 @@
   --primary-accent-bg: #4d5ae5;
   --primary-gray-bg: #8e8f99;
   --primary-gray-cl: #8e8f99;
+  --primary-modal-bg: #fcfcfc;
+  --primary-modal-cl: #fcfcfc;
 
   --secondary-black-cl: #2e2f42;
   --secondary-black-bg: #2e2f42;
@@ -16,6 +18,9 @@
   --secondary-accent-bg: #404bbf;
   --secondary-active-bg: #31d0aa;
   --secondary-active-cl: #31d0aa;
+  --secondary-gray-bg: #e7e9fc;
+  --secondary-gray-cl: #e7e9fc;
+
   --main-gradient: linear-gradient(
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)
@@ -88,7 +93,7 @@ button {
 */
 /* header */
 .header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid --secondary-gray-bg;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   background: var(--primary-white-bg);
@@ -235,7 +240,7 @@ button {
   line-height: 1.5;
   cursor: pointer;
   padding: 12px 24px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid --secondary-gray-bg;
   border-radius: 4px;
 }
 
@@ -464,6 +469,69 @@ button {
   background-color: var(--secondary-active-bg);
 }
 
+/* modal */
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--primary-modal-bg);
+  top: 0;
+  left: 0;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  width: 408px;
+  height: 584px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--primary-modal-bg);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-gray-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: var(--secondary-accent-cl);
+  border: none;
+}
+
+.close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-btn-icon:hover,
+.close-btn-icon:focus {
+  fill: var(--primary-white-bg);
+}
+
 /* style to portfolio */
 
 .filters {
@@ -495,6 +563,6 @@ button {
 
 .portfolio-bloks-name {
   padding: 32px 16px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: none;
 }
