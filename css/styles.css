@@ -85,7 +85,7 @@ a {
 button {
   font-family: inherit;
   cursor: pointer;
-  background-color: var(--secondary-accent-bg);
+  background-color: var(--primary-accent-bg);
 }
 /**
   |============================
@@ -260,6 +260,7 @@ button {
   letter-spacing: 0.04em;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
+  border: none;
   cursor: pointer;
   padding: 12px 24px;
   border: 1px solid --secondary-gray-bg;
